@@ -13,7 +13,7 @@ int main()
     char scr[6];
     double mark[6];
     int units=6, i=0,k=0;
-    double marks, average, highscore, totalmarks=0.0;
+    double marks, average, highscore, totalmarks=0.0,lowestscore;
     char unitname;
 
 
@@ -30,14 +30,19 @@ int main()
     average = totalmarks/units;
     // highscore = max(mark);
     cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
+    cout<<"KCA UNIVERSITY\n";
 
+
+    cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
     for(k=0; k<=6;k++){
         cout<<"Unit "<<k<<" score \t: "<<mark[k]<<"\n";
     }
     highscore = std::max(mark[0], mark[5]);
+    lowestscore = std::min(mark[0], mark[5]);
     cout<<"Total Marks is: \t"<<totalmarks<<"\n";
     cout<<"Average Marks is: \t"<<average<<"\n";
-    cout<<"Highscore is: \t"<<highscore<<"\n";
+    cout<<"High Score is: \t"<<highscore<<"\n";
+    cout<<"Lowest Score is: \t"<<lowestscore<<"\n";
 
     cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
 
