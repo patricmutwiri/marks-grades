@@ -12,37 +12,47 @@ int main()
     //Marks obtained..
     char scr[6];
     double mark[6];
-    int units=6, i=0,k=0;
-    double marks, average, highscore, totalmarks=0.0,lowestscore;
+    int units=6, i=0,k=1,l;
+    double marks, average, highscore=0.0, totalmarks=0.0,lowestscore=10000;
     char unitname;
 
-
-    while(i<=6) {
+    cout<<"\n";
+    cout<<"KCA UNIVERSITY GRADING SYSTEM \n";
+    cout<<"\n";
+    while(i<=5) {
+        l = i-1;
         //cout<<"Enter unit "<<i<<" name"<<"\t\n";
         //cin>>unitname;
-        cout<<"Enter unit "<<i<<" marks"<<"\t\n";
+        cout<<"Enter unit "<<k<<" marks"<<"\t\n";
         cin>>marks;
         scr[i]  = i;
         mark[i] = marks;
         totalmarks = totalmarks+marks;
+
+        highscore = std::max(highscore,marks);
+        lowestscore = std::min(lowestscore,marks);
+        //cout<<lowestscore<<"\n";
+
         i++;
+        k++;
     }
     average = totalmarks/units;
     // highscore = max(mark);
     cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
-    cout<<"KCA UNIVERSITY\n";
+    cout<<"KCA UNIVERSITY GRADING SYSTEM \n";
+
+    cout<<"OOP STUDENT GROUP - 19/03488 \n";
 
 
-    cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
-    for(k=0; k<=6;k++){
+    cout<<":::::::::::::::::::::::::::::::::::::::::: \n";
+    for(k=0; k<=5;k++){
         cout<<"Unit "<<k<<" score \t: "<<mark[k]<<"\n";
     }
-    highscore = std::max(mark[0], mark[5]);
-    lowestscore = std::min(mark[0], mark[5]);
-    cout<<"Total Marks is: \t"<<totalmarks<<"\n";
-    cout<<"Average Marks is: \t"<<average<<"\n";
-    cout<<"High Score is: \t"<<highscore<<"\n";
-    cout<<"Lowest Score is: \t"<<lowestscore<<"\n";
+
+    cout<<"Total Marks is: \t\t"<<totalmarks<<"\n";
+    cout<<"Average Marks is: \t\t"<<average<<"\n";
+    cout<<"High Score is: \t\t"<<highscore<<"\n";
+    cout<<"Lowest Score is: \t\t"<<lowestscore<<"\n";
 
     cout<<"::::::::::::::::::::::::::::::::::::::::::\n";
 
