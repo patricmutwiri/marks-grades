@@ -10,7 +10,7 @@ int main()
     //List score...
     //High score...
     //Marks obtained..
-    char scr[6];
+    char scr[6], grade;
     double mark[6];
     int units=6, i=0,k=1,l;
     double marks, average, highscore=0.0, totalmarks=0.0,lowestscore=10000;
@@ -49,8 +49,21 @@ int main()
         cout<<"Unit "<<k<<" score \t: "<<mark[k]<<"\n";
     }
 
+    if(average>=70) {
+        grade = 'A';
+    } else if (average >= 60) {
+        grade = 'B';
+    } else if (average >= 50) {
+        grade = 'C';
+    } else if (average >= 40) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+
     cout<<"Total Marks is: \t\t"<<totalmarks<<"\n";
     cout<<"Average Marks is: \t\t"<<average<<"\n";
+    cout<<"Mean Grade is: \t\t"<<grade<<"\n";
     cout<<"High Score is: \t\t"<<highscore<<"\n";
     cout<<"Lowest Score is: \t\t"<<lowestscore<<"\n";
 
